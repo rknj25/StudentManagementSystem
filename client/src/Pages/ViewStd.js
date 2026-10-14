@@ -10,7 +10,7 @@ const ViewStd = () => {
     const [std,setStd]=useState([]);
      const getData=async()=>{
             try{
-                const response=await axios.get("http://localhost:9999/api/std/get");
+                const response=await axios.get("https://studentmanagementsystem-pooo.onrender.com/api/std/get");
                 setStd(response.data.allStd);
             }
         catch (error) {
@@ -23,7 +23,7 @@ const ViewStd = () => {
     },[])
     const deleteStudent=async(id)=>{
         try{
-            const response=await axios.delete(`http://localhost:9999/api/std/del/${id}`)
+            const response=await axios.delete(`https://studentmanagementsystem-pooo.onrender.com/api/std/del/${id}`)
             alert(response.data.message)
             getData();
             

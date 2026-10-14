@@ -18,7 +18,7 @@ const Login = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const response=await axios.post("http://localhost:9999/api/auth/log",form)
+            const response=await axios.post("https://studentmanagementsystem-pooo.onrender.com/api/auth/log",form)
             localStorage.setItem("user",JSON.stringify(response.data.extEmail))
             alert(response.data.message)
                 navigate('/dashboard')    

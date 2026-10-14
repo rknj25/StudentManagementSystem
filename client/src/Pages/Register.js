@@ -23,7 +23,7 @@ const Register = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:9999/api/auth/reg",
+                "https://studentmanagementsystem-pooo.onrender.com/api/auth/reg",
                 form
             );
 

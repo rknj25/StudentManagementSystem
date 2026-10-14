@@ -22,7 +22,7 @@ const AddStd = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const response=await axios.post("http://localhost:9999/api/std/add",form)
+            const response=await axios.post("https://studentmanagementsystem-pooo.onrender.com/api/std/add",form)
             alert(response.data.message);
             setForm({
         enroll:"",

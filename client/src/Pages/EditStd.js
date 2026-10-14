@@ -11,7 +11,7 @@ const EditStd = () => {
     const {id}=useParams();
     const getStudent=async(req,res)=>{
         try{
-            const response=await axios.get(`http://localhost:9999/api/std/fnd/${id}`)
+            const response=await axios.get(`https://studentmanagementsystem-pooo.onrender.com/api/std/fnd/${id}`)
             setStd(response.data.rStd)
         }
         catch{
@@ -29,7 +29,7 @@ const EditStd = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const response=await axios.put(`http://localhost:9999/api/std/upd/${id}`,
+            const response=await axios.put(`https://studentmanagementsystem-pooo.onrender.com/api/std/upd/${id}`,
                 std
             )
             alert(response.data.message)

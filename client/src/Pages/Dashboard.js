@@ -12,7 +12,7 @@ const Dashboard = () => {
   const getStudent = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:9999/api/std/get'
+        'https://studentmanagementsystem-pooo.onrender.com/api/std/get'
       );
 
       setStudent(response.data.allStd);
