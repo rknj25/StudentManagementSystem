@@ -20,7 +20,7 @@ const ViewStd = () => {
      
     useEffect(()=>{
          getData();
-    },[])
+    },[getStudent])
     const deleteStudent=async(id)=>{
         try{
             const response=await axios.delete(`https://studentmanagementsystem-pooo.onrender.com/api/std/del/${id}`)
